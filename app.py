@@ -107,7 +107,7 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .rb-metrics { display: flex; gap: 0.7rem; flex-shrink: 0; align-items: stretch; }
 .rb-metric { background: white; border-radius: 12px; padding: 0.6rem 1rem;
              text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.07); min-width: 92px; }
-.rb-metric .val { font-size: 1.35rem; font-weight: 800; }
+.rb-metric .val { font-size: 1.35rem; font-weight: 800; color: #1e293b; }
 .rb-metric .lbl { font-size: 0.68rem; color: #888; font-weight: 500; margin-top: 0.1rem; }
 
 /* Indicador bar */
@@ -174,7 +174,7 @@ section[data-testid="stSidebar"] h3 { color: #FBAE31 !important; font-size: 0.9r
     text-align: center;
     box-shadow: 0 1px 4px rgba(0,0,0,0.07);
 }
-.mini-metric .val { font-size: 1.6rem; font-weight: 800; }
+.mini-metric .val { font-size: 1.6rem; font-weight: 800; color: #1e293b; }
 .mini-metric .lbl { font-size: 0.72rem; color: #888; font-weight: 500; }
 </style>
 """, unsafe_allow_html=True)
@@ -415,7 +415,11 @@ with col_fatores:
         bargap=0.45
     )
     st.plotly_chart(fig_fatores, use_container_width=True, config={'displayModeBar': False})
-    st.caption("Quanto cada indicador contribui para o risco estimado deste aluno.")
+    st.markdown(
+        "<div style='font-size:0.8rem; color:#000000; margin-top:0.3rem;'>"
+        "Quanto cada indicador contribui para o risco estimado deste aluno.</div>",
+        unsafe_allow_html=True
+    )
 
 # ── LINHA 2: Indicadores (grid) + Alertas ─────────────────────────────────────
 st.markdown("<div style='height:0.5rem'></div>", unsafe_allow_html=True)
@@ -475,10 +479,11 @@ with col_alerts:
         for a in alertas:
             st.markdown(f"<div style='background:#fff0f0;border-left:3px solid #E84855;"
                         f"padding:0.6rem 0.8rem;border-radius:6px;font-size:0.82rem;"
-                        f"margin-bottom:0.4rem;'>🚨 {a}</div>", unsafe_allow_html=True)
+                        f"color:#000000;margin-bottom:0.4rem;'>🚨 {a}</div>", unsafe_allow_html=True)
     else:
         st.markdown("<div style='background:#f0fff8;border-left:3px solid #43AA8B;"
-                    "padding:0.6rem 0.8rem;border-radius:6px;font-size:0.82rem;'>"
+                    "padding:0.6rem 0.8rem;border-radius:6px;font-size:0.82rem;"
+                    "color:#000000;'>"
                     "✅ Nenhum alerta crítico identificado</div>", unsafe_allow_html=True)
 
     # Comparação rápida (movida para cá, ao lado dos alertas)
