@@ -13,12 +13,7 @@ Postech - fase 5/
 ├── requirements.txt               # Dependências Python
 ├── README.md                      # Este arquivo
 │
-│   # Gerados ao rodar o notebook:
-├── modelo_risco_defasagem.pkl     # Modelo treinado (Random Forest / Gradient Boosting)
-├── features_modelo.pkl            # Lista de features do modelo
-├── predicoes_risco.csv            # Probabilidades de risco por aluno
-└── *.png / *.html                 # Gráficos exportados
-```
+
 
 ---
 
