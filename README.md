@@ -120,24 +120,7 @@ ID: `1td91KoeSgXrUrCVOUkLmONG9Go3LVcXpcNEw_XrL2R0`
 
 ---
 
-## ☁️ Deploy (Streamlit Community Cloud)
 
-1. Suba o repositório para o GitHub (incluindo `app.py`, `requirements.txt` e os arquivos `.pkl`)
-2. Acesse [streamlit.io/cloud](https://streamlit.io/cloud) e conecte o repositório
-3. Configure: **Main file path** = `app.py`
-4. Clique em **Deploy**
-
----
-
-## 📦 Entregáveis
-
-- [x] `passos_magicos_analise.ipynb` — Análise e modelo preditivo
-- [x] `app.py` + deploy no Streamlit Community Cloud
-- [ ] Apresentação gerencial (PPT/PDF) com storytelling
-- [ ] Vídeo de até 5 minutos
-- [ ] Link do GitHub com o código
-
----
 
 ## 👥 Sobre o Projeto
 
